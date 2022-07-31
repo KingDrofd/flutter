@@ -3,7 +3,6 @@
 // found in the LICENSE file.
 
 import 'dart:collection';
-import 'package:blog_app/fadeduration.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/rendering.dart';
@@ -861,10 +860,10 @@ class _InkResponseState extends State<_InkResponseStateWidget>
   Duration getFadeDurationForType(_HighlightType type) {
     switch (type) {
       case _HighlightType.pressed:
-        return Duration(milliseconds: fadeDuration(0));
+        return Duration(milliseconds: 200);
       case _HighlightType.hover:
       case _HighlightType.focus:
-        return Duration(milliseconds: fadeDuration(0));
+        return Duration(milliseconds: 50);
     }
   }
 
